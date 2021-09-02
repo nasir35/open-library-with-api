@@ -12,7 +12,7 @@
 </head>
 <body class="bg-light">
     <!-- main section start here -->
-    <main>
+    <main style="min-height: 85vh;" class="container">
         <section>
         <h1 class="text-center text-dark pt-4">Open Book Library!</h1>
         <!-- div for search box and search button -->
@@ -26,16 +26,18 @@
                 </div>
             </div>
             <!-- div for conatain search result  -->
-            <div id="search-result-container" class="container">
+            <div id="search-result-container">
                 <p class="text-center py-1 fs-5 rounded w-50 mx-auto" id="search-message"></p>
-                <div class="row row-cols-1 row-cols-md-4 g-4 pt-4" id="books-container">
+                <div class="row row-cols-1 row-cols-md-4 g-4 py-4" id="books-container">
 
                 </div>
             </div>
         </section>
     </main>
     <!-- main section end here -->
-
+    <footer class="text-center bg-dark py-4">
+        <p class="text-white">All right reserved by Nasir &copy;2021</p>
+    </footer style="max-height: 15vh">
     <!-- bootstrap js link  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <!-- custom js link  -->

@@ -39,6 +39,8 @@ const searchBook = () =>{
     const searchText = document.getElementById('search-text').value;
     if(searchText.length === 0){
         toggleMessage('d-block', 'Please enter a Book name!');
+        // clearing all content from books container 
+        document.getElementById('books-container').textContent = '';
     }
     else{
         toggleMessage('d-none');
