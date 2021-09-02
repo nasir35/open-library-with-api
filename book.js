@@ -71,7 +71,6 @@ const displayBooks = data => {
         const bookList = data.docs;
         const booksContainer = document.getElementById('books-container');
         bookList.forEach(book => {
-            console.log(book);
             const div = document.createElement('div');
             div.classList.add('col');
             div.innerHTML = `
@@ -94,7 +93,7 @@ const displayBooks = data => {
 
 // getImage function will check if the book has an image or not. if there is no image, it will set a default image; which describe it has no image 
 const getImage = book =>{
-    if(book.cover_i == null){
+    if(book.cover_i === undefined){
         return 'https://covers.openlibrary.org/b/id/10909258-M.jpg';
     }
     else{
@@ -114,7 +113,7 @@ const getBookName = book =>{
 
 // getAuthorName function will check whether Author name exist in the result or not! if not it will set 'Unknown' as the Author value.
 const getAuthorName = book => {
-    if(book.author_name != null){
+    if(book.author_name !== undefined){
         return book.author_name[0];
     }
     else{
@@ -123,7 +122,7 @@ const getAuthorName = book => {
 }
 // getPublisherName function will check whether publisher exist in the result or not! if not it will set 'Unknown' as the publisher value.
 const getPublisherName = book => {
-    if(book.publisher != null){
+    if(book.publisher !== undefined){
         return book.publisher[0];
     }
     else{
@@ -132,7 +131,7 @@ const getPublisherName = book => {
 }
 // getPublishYear function will check whether first publish year exist in the result or not! if not it will set 'Unknown' as the first publish year value.
 const getPublishYear = book => {
-    if(book.first_publish_year != null){
+    if(book.first_publish_year !== undefined){
         return book.first_publish_year;
     }
     else{
